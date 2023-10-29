@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace commanastationwww.eternaltemple{
 public class Move : MonoBehaviour {
 
 	private float speed = 7f;
@@ -16,7 +15,8 @@ public class Move : MonoBehaviour {
 		character = GetComponent<CharacterController>();		
 	}
 	
-	void Update () {
+	void Update () 
+	{
 		horizontalMovement = Input.GetAxis("Horizontal");
 		verticalMovement = Input.GetAxis("Vertical");
 		
@@ -27,5 +27,4 @@ public class Move : MonoBehaviour {
 		destination.y -= gravity * Time.deltaTime;
         character.Move(destination * Time.deltaTime);		
 	}
-}
 }
